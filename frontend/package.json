@@ -1,0 +1,7 @@
+{
+  "name": "test-travis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nils Layet <nils@epita.fr>",
+  "license": "MIT"
+}
