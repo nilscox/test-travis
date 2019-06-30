@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "clean": "rimraf src/bundle.js"
+    "clean": "rimraf public/bundle.js"
   },
   "devDependencies": {
     "rimraf": "^2.6.3",
