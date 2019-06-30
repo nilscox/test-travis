@@ -23,7 +23,7 @@ jobs:
     - stage: build
       name: "build"
       install: yarn --production false
-      script: yarn clean && yarn build
+      script: rm -rf $TRAVIS_BUILD_DIR/public/js/bundle.js && echo "console.log('hello');" >> $TRAVIS_BUILD_DIR/public/js/bundle.js
 
     - stage: deploy
       name: "deploy"
