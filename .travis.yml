@@ -15,7 +15,8 @@ env:
 
 stages:
   - build
-  - deploy
+  - name: deploy
+    if: branch = master
 
 jobs:
   include:
