@@ -15,7 +15,8 @@ env:
 
 stages:
   - build
-  - deploy
+  - name: deploy
+    if: branch = master
 
 jobs:
   include:
@@ -30,5 +31,4 @@ jobs:
       script: skip
       deploy:
         - provider: script
-          skip_cleanup: true
           script: ./deploy.sh
