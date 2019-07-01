@@ -22,8 +22,6 @@ jobs:
   include:
     - stage: build
       name: "build"
-      env:
-        - FOO=42
       install: skip
       script:
         - rm -rf public/bundle.js
