@@ -23,8 +23,6 @@ jobs:
     - stage: build
       name: "build"
       install: skip
-      env:
-        - FOO=bar
       script:
         - rm -rf public/bundle.js
         - echo "console.log('hello');" >> public/bundle.js
