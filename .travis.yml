@@ -2,8 +2,9 @@ language: node_js
 node_js: 10
 
 cache:
+  yarn: true
   directories:
-    - frontend/public
+    - public
 
 git:
   depth: false
@@ -21,10 +22,8 @@ jobs:
   include:
     - stage: build
       name: "build"
-      install: skip
-      script:
-        - rm -rf ./frontend/public/js/bundle.js
-        - echo "console.log('hello');" >> ./frontend/public/js/bundle.js
+      install: yarn --production false
+      script: rm -rf $TRAVIS_BUILD_DIR/public/js/bundle.js && echo "console.log('hello');" >> $TRAVIS_BUILD_DIR/public/js/bundle.js
 
     - stage: deploy
       name: "deploy"
