@@ -4,7 +4,7 @@ node_js: 10
 cache:
   yarn: true
   directories:
-    - public
+    - $TRAVIS_BUILD_DIR
 
 git:
   depth: false
@@ -22,8 +22,6 @@ jobs:
   include:
     - stage: build
       name: "build"
-      env:
-        - FOO=42
       install: skip
       script:
         - rm -rf public/bundle.js
